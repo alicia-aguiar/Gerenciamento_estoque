@@ -16,7 +16,7 @@ return new class extends Migration
             $table->integer('quantidade');
             $table->date('data_movimentacao');
             $table->enum('tipo', ['entrada', 'saida']);
-            $table->foreignId('produto_id')->constrained();
+            $table->foreignId('produto_id')->constrained('produtos')->onDelete('cascade');
             
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');

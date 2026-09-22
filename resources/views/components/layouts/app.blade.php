@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almoxarifado</title>
+    
+    <!-- Link Oficial do Bootstrap 5 (Aqui ele carrega globalmente) -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    
+    @livewireStyles
+</head>
+<body class="bg-body-tertiary">
 
-        <title>{{ $title ?? 'Page Title' }}</title>
-    </head>
-    <body>
-        {{ $slot }}
-    </body>
+    <!-- O Livewire vai injetar o formulário exatamente aqui dentro -->
+    {{ $slot }}
+
+    <!-- Script Oficial do Bootstrap -->
+    <script src="https://jsdelivr.net"></script>
+    
+    @livewireScripts
+</body>
 </html>
